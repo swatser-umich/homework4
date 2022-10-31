@@ -1,0 +1,194 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16pt;
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  background-color: #efefef;
+}
+
+header {
+  background: #fff;
+  border-bottom: 3px solid #50C7C7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2em;
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5em;
+  text-align: center;
+  padding-top: 20px;
+}
+
+h4 {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+p {
+  padding: 0 30px;
+}
+
+a.skip{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+a.skip:focus{
+  top:20px;
+  color: black;
+  text-decoration-style: solid;
+}
+
+*:focus{
+  border: 2px solid black;
+}
+
+.nav_links {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav_item a{
+  padding: 10px;
+}
+
+.nav_item a:hover, a:focus{
+  color: #50C7C7;
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+
+.pricing{
+  min-height: 475px;
+  display: flex;
+  width: full;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  margin: 12px;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 30px 30px 0 0;
+  padding: 0 0 20px 0;
+}
+
+.card > ul{
+  list-style: none;
+  padding-left: 5px;
+}
+
+.card > ul li {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.card button{
+  width: 90%;
+  height: 40px;
+  border: 0;
+  margin-left: 5%;
+  border-radius: 7px;
+  background: #288080;
+  color: white;
+  font-size: 1em;
+}
+
+.card h3 {
+  font-size: 4em;
+  color: white;
+  text-align: center;
+  background-color: #288080;
+}
+
+.gallery {
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  width: full;
+}
+
+.gallery img {
+  border: 5px solid #50C7C7;
+  margin: 10px;
+}
+
+footer{
+  background-color: black;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+@keyframes logoChange {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+#logo {
+  animation-name: logoChange;
+  animation-duration: 3s;
+}
+
+@media (prefers-reduced-motion) {
+  animation: none;
+}  
+
+@media screen and (min-width: 700px){
+  header {
+    width: full;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header > #logo {
+    width: 400px;
+  }
+
+  .nav_links {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .pricing {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    width: 300px;
+  }
+
+  .gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .gallery img {
+    width: 300px;
+  }
+}
